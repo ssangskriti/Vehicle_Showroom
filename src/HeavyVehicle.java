@@ -1,12 +1,16 @@
 public class HeavyVehicle extends Vehicle {
 
-    void addVehicle (int model_number, String engine_type, int engine_power, int tire_size, int weight){
-        System.out.println("Added new vehicle with:\n"+
-                "Model Number:"+ model_number+"\n"+
-                "Engine Type: "+ engine_type +"\n"+
-                "Engine Power:  "+ engine_power+"\n"+
-                "Tire Size: "+tire_size+"\n",
-                "Weight: "+ weight);
+    int weight;
+    HeavyVehicle(int model_number, int engine_power, int tire_size, int weight)
+    {
+            super( "Heavy",  model_number,  "diesel",  engine_power,  tire_size);
+            this.weight = weight;
+    }
+
+    @Override
+    void addVehicle (Vehicle v){
+
+        Vehicle.vehicleList.add(v);
 
     }
 }
