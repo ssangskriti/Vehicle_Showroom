@@ -45,10 +45,19 @@ abstract class Vehicle {
             System.out.println("\nModelNumber EngineType EnginePower VehicleType TireSize\n");
             for(Vehicle v: vehicleList)
             {
-                System.out.println(v.model_number+"\t\t"+v.engine_type+"\t\t"+v.engine_power+"\t\t"+v.type
+                System.out.print(v.model_number+"\t\t"+v.engine_type+"\t\t"+v.engine_power+"\t\t"+v.type
                                         +"\t\t"+v.tire_size);
-            }
+                if(v.type.equals("Sports")) {
+                    SportsVehicle s = (SportsVehicle) v;
+                    System.out.print("\t\tTurbo= "+ s.turbo);
+                }
+                if(v.type.equals("Heavy")) {
+                    HeavyVehicle h = (HeavyVehicle) v;
+                    System.out.print("\t\tWeight= "+ h.weight);
+                }
+                System.out.print("\n");
 
+            }
 
         }
         else System.out.println("Sorry, no vehicles to show.");
