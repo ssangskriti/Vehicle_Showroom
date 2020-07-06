@@ -6,13 +6,13 @@ abstract class Vehicle {
      String type;
      int model_number;
      int engine_power;
-     int tire_size;
+     String tire_size;
      String engine_type;
 
     static ArrayList<Vehicle> vehicleList = new ArrayList<Vehicle>();
     static int visitorCounter = 0;
 
-    Vehicle(String type, int model_number, String engine_type, int engine_power, int tire_size ){
+    Vehicle(String type, int model_number, String engine_type, int engine_power, String tire_size ){
 
         this.type = type;
         this.model_number = model_number;
@@ -42,9 +42,14 @@ abstract class Vehicle {
     static void showVehicleList(){
         if(!vehicleList.isEmpty()){
             System.out.println("Current list of vehicle in the showroom: ");
-            System.out.println("\nModel Number \t Engine type \t Engine Power \t Vehicle type\n");
+            System.out.println("\nModelNumber EngineType EnginePower VehicleType TireSize\n");
             for(Vehicle v: vehicleList)
-                System.out.println(v.model_number+"\t\t"+v.engine_type+"\t\t"+v.engine_power+"\t\t"+v.type);
+            {
+                System.out.println(v.model_number+"\t\t"+v.engine_type+"\t\t"+v.engine_power+"\t\t"+v.type
+                                        +"\t\t"+v.tire_size);
+            }
+
+
         }
         else System.out.println("Sorry, no vehicles to show.");
     }

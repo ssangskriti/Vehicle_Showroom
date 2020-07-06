@@ -33,7 +33,7 @@ public class Main {
                     System.out.println("\n Engine Power: ");
                     int engine_power = command.nextInt();
                     System.out.println("\n Tire Size: ");
-                    int tire_size = command.nextInt();
+                    String tire_size = command.next();
                     NormalVehicle vehicle = new NormalVehicle(model_number, engine_type,
                             engine_power, tire_size);
 
@@ -44,7 +44,7 @@ public class Main {
                     System.out.println("\n Engine Power: ");
                     int engine_power = command.nextInt();
                     System.out.println("\n Tire Size: ");
-                    int tire_size = command.nextInt();
+                    String tire_size = command.next();
                     System.out.println("\n Turbo: yes or no");
                     String inturbo = command.next();
                     boolean turbo;
@@ -62,7 +62,7 @@ public class Main {
                     System.out.println("\n Engine Power: ");
                     int engine_power = command.nextInt();
                     System.out.println("\n Tire Size: ");
-                    int tire_size = command.nextInt();
+                    String tire_size = command.next();
                     System.out.println("\n Weight: ");
                     int weight = command.nextInt();
 
