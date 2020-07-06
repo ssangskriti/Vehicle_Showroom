@@ -1,4 +1,3 @@
-#Readme
 
 A command line system for a vehicle showroom.
 
